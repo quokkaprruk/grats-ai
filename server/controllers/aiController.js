@@ -88,7 +88,6 @@ export const generateBlogTitle = async (req, res) => {
     const content = response.choices[0].message.content;
     console.log(content);
 
-    // write content to sql
     await sql` INSERT INTO creations(user_id, prompt, content, type) 
     VALUES (${userId}, ${prompt}, ${content}, 'blog-title')`;
 
@@ -134,7 +133,6 @@ export const summarizeText = async (req, res) => {
     const content = response.choices[0].message.content;
     console.log(content);
 
-    // write content to sql
     await sql` INSERT INTO creations(user_id, prompt, content, type) 
     VALUES (${userId}, ${prompt}, ${content}, 'text-summary')`;
 
@@ -184,7 +182,6 @@ export const generateImage = async (req, res) => {
 
     const { secure_url } = await cloudinary.uploader.upload(base64Image);
 
-    // write content to sql
     await sql` INSERT INTO creations(user_id, prompt, content, type, publish) 
     VALUES (${userId}, ${prompt}, ${secure_url}, 'image', ${publish ?? false})`;
 
@@ -217,7 +214,6 @@ export const removeImageBackground = async (req, res) => {
       ],
     });
 
-    // write content to sql
     await sql` INSERT INTO creations(user_id, prompt, content, type) 
     VALUES (${userId}, 'Remove background from image', ${secure_url}, 'image')`;
 
@@ -247,7 +243,6 @@ export const removeImageObject = async (req, res) => {
       transformation: [{ effect: `gen_remove:${object}` }],
       resource_type: "image",
     });
-    // write content to sql
     await sql` INSERT INTO creations(user_id, prompt, content, type) 
     VALUES (${userId}, ${`Remove ${object} from image`}, ${imageUrl}, 'image')`;
 
@@ -298,7 +293,6 @@ export const resumeReview = async (req, res) => {
     const content = response.choices[0].message.content;
     console.log(content);
 
-    // write content to sql
     await sql` INSERT INTO creations(user_id, prompt, content, type) 
     VALUES (${userId}, 'Review the upload resume', ${content}, 'resume-review')`;
 
