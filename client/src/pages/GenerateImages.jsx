@@ -84,12 +84,12 @@ const GenerateImages = () => {
         <textarea
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          rows={3}
+          rows={2}
           placeholder="Describe what you want to see..."
           required
           className="w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300"
         />
-        <p className="mt-4 text-sm font-medium">Style</p>
+        <p className="mt-3 text-sm font-medium">Style</p>
         <div className="mt-3 flex gap-3 flex-wrap sm:max-w-10/11">
           {imageStyle.map((item) => (
             <span

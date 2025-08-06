@@ -30,7 +30,7 @@ const Layout = () => {
           />
         )}
       </nav>
-      <div className="flex-1 w-full flex h-screen">
+      <div className="flex-1 w-full flex h-[calc(100vh-64px)]">
         {/* <div className="flex-1 w-full flex h-[calc(100vh-64px)]"> */}
         <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
         <div className="flex-1 bg-[#F4F7FB] bg-[url(/doubleWaves.png)] bg-cover bg-center">

@@ -23,9 +23,6 @@ const Footer = () => {
               <li>
                 <a href="#">About us</a>
               </li>
-              <li>
-                <a href="#">Privacy policy</a>
-              </li>
             </ul>
           </div>
           <div>
@@ -54,7 +51,7 @@ const Footer = () => {
       </div>
       <p className="pt-4 text-center text-xs md:text-sm pb-5">
         © {new Date().getFullYear()}{" "}
-        <a href="https://prebuiltui.com">Saas.ai</a>. All Right Reserved.
+        <a href="https://prebuiltui.com">Grats.ai</a>. All Right Reserved.
       </p>
     </footer>
   );

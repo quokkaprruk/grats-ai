@@ -11,7 +11,7 @@ function Hero() {
       <div className="text-center mb-6">
         <h1 className="text-white text-3xl sm:text-5xl md-text-6xl 2xl-text-7xl font-semibold mx-auto leading-[1.2]">
           Elevate your workflow with{" "}
-          <span className="text-primary">AI tools</span>
+          <span className="text-[#ff2d2d]">AI tools</span>
           <br />
         </h1>
         <p className=" mt-4 max-w-xs sm:max-w-lg 2xl:max-w-xl mx-auto max-sm:text-xs text-gray-400">
@@ -22,7 +22,7 @@ function Hero() {
       <div className="flex flex-wrap justify-center gap-4 text-sm max-sm:text-xs">
         <button
           onClick={() => navigate("/ai")}
-          className="bg-primary text-white px-10 py-3 rounded-lg hover:scale-102 active:scale-95 transition cursor-pointer"
+          className="bg-[#ff2d2d] text-white px-10 py-3 rounded-lg hover:scale-102 active:scale-95 transition cursor-pointer"
         >
           Start creating now
         </button>

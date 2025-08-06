@@ -43,7 +43,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           alt="User avatar"
           className="w-13 rounded-full mx-auto"
         />
-        <h1 className="mt-1 text-center">{user.fullName}</h1>
+        <h1 className="mt-1 text-gray-200 text-center">{user.fullName}</h1>
         <div className="px-6 mt-10 text-sm text-gray-400 font-medium">
           {navItems.map(({ to, label, Icon }) => (
             <NavLink
@@ -74,7 +74,9 @@ const Sidebar = ({ sidebar, setSidebar }) => {
         <div className="flex gap-2 items-center cursor-pointer">
           <img src={user.imageUrl} className="w-8 rounded-full" alt="" />
           <div>
-            <h1 className="text-sm font-medium">{user.fullName}</h1>
+            <h1 className="text-sm text-gray-200 font-medium">
+              {user.fullName}
+            </h1>
             <p className="text-xs text-gray-200">
               <Protect plan="premium" fallback="Free">
                 Premium
