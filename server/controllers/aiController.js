@@ -82,7 +82,7 @@ export const generateBlogTitle = async (req, res) => {
         },
       ],
       temperature: 0.7,
-      max_tokens: 100,
+      max_tokens: 500,
     });
 
     const content = response.choices[0].message.content;
@@ -300,5 +300,18 @@ export const resumeReview = async (req, res) => {
   } catch (error) {
     console.log(error.message);
     res.json({ success: false, message: error.message });
+  }
+};
+
+export const deleteDashboardItem = async (req, res) => {
+  try {
+    const { userId } = req.auth();
+    const { id: itemId } = req.params;
+
+    await sql`DELETE FROM creations WHERE id = ${itemId} AND user_id = ${userId}`;
+    res.json({ success: true, message: "Item deleted successfully" });
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ success: false, message: error.message });
   }
 };

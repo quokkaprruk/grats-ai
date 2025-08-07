@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  deleteDashboardItem,
   generateArticle,
   generateBlogTitle,
   generateImage,
@@ -34,4 +35,5 @@ aiRouter.post(
 
 aiRouter.post("/resume-review", upload.single("resume"), auth, resumeReview);
 
+aiRouter.post("/delete/:id", auth, deleteDashboardItem);
 export default aiRouter;

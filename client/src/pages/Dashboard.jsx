@@ -78,7 +78,15 @@ const Dashboard = () => {
               No creations yet. Let's get started!
             </p>
           ) : (
-            creations.map((item) => <CreationItem key={item.id} item={item} />)
+            creations.map((item) => (
+              <CreationItem
+                key={item.id}
+                item={item}
+                onDelete={(deletedId) =>
+                  setCreations((prev) => prev.filter((i) => i.id !== deletedId))
+                }
+              />
+            ))
           )}
         </div>
       )}
