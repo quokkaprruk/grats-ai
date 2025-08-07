@@ -49,7 +49,7 @@ const RemoveObject = () => {
 
   return (
     <div className="flex flex-col items-center gap-6 w-full px-4 mt-10">
-      <div className="bg-[#ffffffd8] flex flex-col rounded-lg shadow-md p-6 w-full max-w-screen-md min-h-[45vh] max-h-[50vh] overflow-y-auto">
+      <div className="bg-[#ffffffd8] flex flex-col rounded-lg shadow-md p-6 w-full max-w-screen-md min-h-[30vh] max-h-[40vh] overflow-y-auto">
         <div className="flex items-center gap-3">
           <Scissors className="w-5 h-5 text-[#4A7AFF]" />
           <h1 className="text-xl font-semibold">Processed Image </h1>
@@ -94,7 +94,7 @@ const RemoveObject = () => {
         <textarea
           onChange={(e) => setObject(e.target.value)}
           value={object}
-          rows={4}
+          rows={1}
           placeholder="e.g., glass or spoon, Only a single object name"
           required
           className="w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300"

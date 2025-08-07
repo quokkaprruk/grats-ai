@@ -46,7 +46,7 @@ const RemoveBackground = () => {
 
   return (
     <div className="flex flex-col items-center gap-6 w-full px-4 mt-10">
-      <div className="bg-[#ffffffd8] flex flex-col rounded-lg shadow-md p-6 w-full max-w-screen-md min-h-[45vh] max-h-[50vh] overflow-y-auto">
+      <div className="bg-[#ffffffd8] flex flex-col rounded-lg shadow-md p-6 w-full max-w-screen-md min-h-[30vh] max-h-[40vh] overflow-y-auto">
         <div className="flex items-center gap-3">
           <Eraser className="w-5 h-5 text-[#FF4938]" />
           <h1 className="text-xl font-semibold">Processed Image </h1>
